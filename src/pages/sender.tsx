@@ -5,7 +5,7 @@ export const Sender = () => {
   
   const [socket, setSocket] = useState<WebSocket | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [pc, setPC] = useState<RTCPeerConnection | null>(null);
+  const [, setPC] = useState<RTCPeerConnection | null>(null);
 
   useEffect(() => {
     const socket = new WebSocket("wss://signaling-server-7iph.onrender.com");
