@@ -5,7 +5,7 @@ export const Receiver = () => {
   const [isPlaying, setIsPlaying] = useState(false); // State to track if the video is playing
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:8080");
+    const socket = new WebSocket("wss://signaling-server-7iph.onrender.com");
     socket.onopen = () => {
       socket.send(
         JSON.stringify({

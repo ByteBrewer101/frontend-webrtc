@@ -8,7 +8,7 @@ export const Sender = () => {
   const [pc, setPC] = useState<RTCPeerConnection | null>(null);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:8080");
+    const socket = new WebSocket("wss://signaling-server-7iph.onrender.com");
     setSocket(socket);
     socket.onopen = () => {
       socket.send(
